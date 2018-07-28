@@ -14,10 +14,10 @@
     }
   }
 
-  def reverse(list: List[Int]): Int = {
+  def reverse(list: List[Int]): List[Int] = {
     list match {
-      case Nil => Nil
+      case Nil => 0
       case h::Nil => h
-      case h::t => reverse(t)::h
+      case h::t => reverse(t):::List(h)
     }
   }
